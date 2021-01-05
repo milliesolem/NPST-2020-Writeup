@@ -1274,9 +1274,4 @@ Leser man QR-koden får man `PST{4ll_th3s3_d3l1c10us_l4y3rs}`, som er flagget.
 
 ## 24. Desember
 
-Så kom vi til julaften. Her ble det mye kluss. Oppgaven ble sluppet kvelden før, og folk løste og leverte utover natten. Neste morgen ble det mye bråk blant alvebetjenter som hadde følt seg snutt. Oppgaven var også ganske krevende - man ble gitt en tjenestepakke som installerte en "sledesimulator". I denne kunne man laste opp s8-binærfiler for å styre en slede. Måten dette funket på var at programmet ble matet en ASN.1 BER-enkodet streng som inneholdt posisjonen på sleden både i dette tidssteget og det forrige, samt koordinatene til en landingsplattform. Med dette skulle man skrive et program som skulle gi instruksjoner til tre motorer som kunne skrues av og på, i form av ASN.1 BER-enkodet oppgulp. Til alt dette skulle man skrive et program i SLEDE-8 som kunne konsekvent lande på landingsplattformen med en maksimums vertikal- og horisontal-fart, gitt forskjellige startfarter. 
-
-Krevede oppgave, spesielt for julaften. Jeg klarte ikke å løse den, litt ut av skuffelse for at det kom en slik oppgave på selve julaften -- og at den kom ut 12 timer før den skulle, og litt ut av at jeg som mange andre hadde ting å gjøre på julaften annet enn å sitte på PC-en og løse oppgaver. Men jeg kan i det minste dele noe av det jeg kom frem til med denne oppgaven; en ting jeg bemerket meg var at tallene i BER-enkodingen ofte kom etter en null-byte, og jeg brukte dette til å lese tall. Det hendte i noen tilfeller at dette ikke funket, og at programmet gikk tom for føde. 
-
-### EGG #11
-
+Jeg løste verken 24. desember eller Egg #11
