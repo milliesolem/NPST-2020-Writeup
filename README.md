@@ -1286,4 +1286,4 @@ Det ble fort tydelig at det også var et Egg #11 liggende rundt; søkelyset rett
 
 ## Tanker
 
-Nok en gang leverer PST en utrolig morro adventskalender med et mangfold av spennende og utfordrene oppgaver. Til kritikk er det kanskje verdt å nevne at de kunne roet *litt* ned med SLEDE-8 oppgavene, og mulig oppgaven til den siste luken ikke kunne komme natten før uten forvarsel, men heller kl 7 som de gjorde med oppgavene før. Men det tar ikke fra at dette har alt i alt vært et spennende mysterium som har gjort ukene før jul en hel der mer spennende. Jeg ser virkelig frem til neste gåte de har på lur.
+Nok en gang leverer PST en utrolig morro adventskalender med et mangfold av spennende og utfordrene oppgaver. Til kritikk er det kanskje verdt å nevne at de kunne roet *litt* ned med SLEDE-8 oppgavene, og mulig oppgaven til den siste luken ikke kunne komme natten før uten forvarsel, men heller kl 7 som de gjorde med oppgavene før. Men det tar ikke fra at dette har alt i alt vært et spennende mysterium som har gjort ukene før jul en hel del mer spennende. Jeg ser virkelig frem til neste gåte de har på lur.
