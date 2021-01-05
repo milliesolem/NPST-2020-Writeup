@@ -747,7 +747,7 @@ I mellomtiden har jeg jobbet iherdig med å montere koden. Klarer du å forstå 
 Se vedlagt fil for den monterte koden. Tastefinger mente det var relevant å fortelle at du kan finne nyttige verktøy her (https://github.com/PSTNorge/slede8).
 ```
 
-Vi blir gitt fila `program.s8`, som er en SLEDE-8 binærfil. Ved første øyekast var jeg usikker på fremgangsmåte, men etter litt tenkning bestemte jeg meg for å porte [runtime.ts](https://github.com/PSTNorge/slede8/blob/main/src/runtime.ts) fra PSTs github til Python. På den måten hadde jeg en enkel måte å debugge fila på. Det ble tydelig under debuggingen av fila at den tar inn et passord, og antagelig gjør en XOR-operasjon med et innebygd passord for å sjekke om de matcher. Vi kan lekke passordetved å gjøre slik at den printer hva den XOR-er mens den kjører. kjør vi det får vi disse tallene:
+Vi blir gitt fila `program.s8`, som er en SLEDE-8 binærfil. Ved første øyekast var jeg usikker på fremgangsmåte, men etter litt tenkning bestemte jeg meg for å porte [runtime.ts](https://github.com/PSTNorge/slede8/blob/main/src/runtime.ts) fra PSTs github til Python. På den måten hadde jeg en enkel måte å debugge fila på. Det ble tydelig under debuggingen av fila at den tar inn et passord, og antagelig gjør en XOR-operasjon med et innebygd passord for å sjekke om de matcher. Vi kan lekke passordetved å gjøre slik at den printer hva den XOR-er mens den kjører. gjør vi det får vi disse tallene:
 
 ```
 0 ^ 1, 1 ^ 81, 0 ^ 2, 2 ^ 81, 0 ^ 3, 3 ^ 87, 0 ^ 5, 5 ^ 126, 0 ^ 8, 8 ^ 110, 0 ^ 13, 13 ^ 100, 0 ^ 21, 21 ^ 119, 0 ^ 34, 34 ^ 18, 0 ^ 55, 55 ^ 89, 0 ^ 89, 89 ^ 56, 0 ^ 144, 144 ^ 243, 0 ^ 233, 233 ^ 138, 0 ^ 121, 121 ^ 72, 0 ^ 98, 98 ^ 61, 0 ^ 219, 219 ^ 235, 0 ^ 61, 61 ^ 83, 0 ^ 24, 24 ^ 125, 0 ^ 85, 85 ^ 33, 0 ^ 109, 109 ^ 92, 0 ^ 194, 194 ^ 175, 0 ^ 47, 47 ^ 28, 0 ^ 241, 241 ^ 174, 0 ^ 32, 32 ^ 80, 0 ^ 17, 17 ^ 37, 0 ^ 49, 49 ^ 85, 0 ^ 66, 66 ^ 63
@@ -763,7 +763,7 @@ Takk for input!
 Dette var føde til ettertanke. Hvis du har livslyst igjen kan du prøve på denne fila også.
 ```
 
-Vi blir gitt fila `💀.s8`. Første jeg gjorde var som i forrige oppgaven og så på XOR-operasjonene. Det første som stakk ut var at de første par operasjonene var uavhenging av hva jeg skrev inn som input, men jeg merket at ved å skrive `EGG{` i starten av input var det flere av XOR-operasjonene som resulterte i null. Jeg fulgte stien og lagde et skript som talte opp antall nuller for hver operasjon du finner skriptet i `Egg 8`-mappen. Kjører vi skriptet får vi output `EGG{513d38_master_reverser}`, som er egget.
+Vi blir gitt fila `💀.s8`. Første jeg gjorde var som i forrige oppgaven og så på XOR-operasjonene. Det første som stakk ut var at de første par operasjonene var uavhenging av hva jeg skrev inn som input, men jeg merket at ved å skrive `EGG{` i starten av input var det flere av XOR-operasjonene som resulterte i null. Jeg fulgte stien og lagde et skript som talte opp antall nuller for hver operasjon. Du finner skriptet i `Egg 8`-mappen. Kjører vi skriptet får vi output `EGG{513d38_master_reverser}`, som er egget.
 
 ## 13. Desember
 
@@ -1274,4 +1274,16 @@ Leser man QR-koden får man `PST{4ll_th3s3_d3l1c10us_l4y3rs}`, som er flagget.
 
 ## 24. Desember
 
-Jeg løste verken 24. desember eller Egg #11
+Jeg løste verken 24. desember eller Egg #11.
+
+Natten til julaften dukket det opp en tjenestepakkeinstallering på DASS. Etter installasjonen av tjenestepakken fikk alvebetjenter tilgang til et sledesimuleringsprogram. Lang historie kort kunne man igjennom kildekoden til programme fort finne ut at målet var å skrive et SLEDE-8 program til å styre sleden. Programmet ville kjøre hvert tidssteg av simuleringen og bli gitt informasjon om sledens nåværende posisjon, posisjon i det forrige tidssteget, samt posisjonen til målet, alt enkodet i ASN.1 BER-format. Med dette skulle programmet bestemme hvilken av de tre motorene til sleden skulle skrues på -- dette skulle forresten også printes ut i ASN.1 BER-format. Målet var å lande sleden med en vertikal hastighet mindre enn 3 og en horisontal hastighet mindre enn 2.
+
+Dette oppgaven var alt for krevende for julaften, og julen generelt, da jeg og mange andre hadde feiring på angendaen. Etter julaften kunne jeg ikke bringe meg til å løse den, siden jeg ikke så noe vits. Det var ikke noe å finne ut, bare timer med debugging av assembly-kode. Top 10 på poengtavlen var for lengst forbigått. Jeg bestemte meg heller for å ta jul.
+
+### Egg #11
+
+Det ble fort tydelig at det også var et Egg #11 liggende rundt; søkelyset rettet seg til egg.spst.no. Siden spurte om passord. Jeg hadde bare to passord jeg kunne tenke meg, `til zip-fila,` fra 3. desember, og `jeger2` fra 17. desember. Ingen av passordene funket, lite visste jeg hvor nær jeg var, da det viste seg etter kalenderen var over at passordet faktisk var fra 17. desember: `****************`. Nære, men ikke nære nok.
+
+## Tanker
+
+Nok en gang leverer PST en utrolig morro adventskalender med et mangfold av spennende og utfordrene oppgaver. Til kritikk er det kanskje verdt å nevne at de kunne roet *litt* ned med SLEDE-8 oppgavene, og mulig oppgaven til den siste luken ikke kunne komme natten før uten forvarsel, men heller kl 7 som de gjorde med oppgavene før. Men det tar ikke fra at dette har alt i alt vært et spennende mysterium som har gjort ukene før jul en hel der mer spennende. Jeg ser virkelig frem til neste gåte de har på lur.
