@@ -1,0 +1,44 @@
+SETT r1, 0xfe ; vi setter r1 til 0xfe, slik at vi ikke overskiver programminnet
+LES r2 ; r2 er lengden på tallrekken
+SETT r4, 1 ; r4 er konstant 1
+SETT r5, r2 ; r5 plir brukt til å trekke fra 1 for hver byte vi leser, så vi vet når vi er tom for føde
+SETT r6, 0xff ; blir brkt i enden av programmet til å printe ut 0xff-bytes
+
+; leser føde
+read:
+LES r0 ; vi leser til r0, slik at det peker på samme minneaddresse som tallet
+LAST r11
+PLUSS r11, r4
+LAGR r11
+MINUS r5, r4
+ULIK r5, r8
+BHOPP read
+
+; neste løkke starter med å legge 1 til r0, så vi setter den til 0xff så vi starter på 0
+SETT r0, 0xff
+write:
+PLUSS r0, r4
+LIK r0, r6
+BHOPP finish
+LAST r11
+
+; skriver ut like mange ganger som er lagret i minneaddressen
+write_loop:
+LIK r11, r8
+BHOPP write
+SKRIV r0
+MINUS r11, r4
+HOPP write_loop
+
+finish:
+SETT r0, r6
+LAST r11
+sub:
+LIK r11, r8
+BHOPP stopp
+SKRIV r0
+MINUS r11, r4
+HOPP sub
+
+stopp:
+STOPP

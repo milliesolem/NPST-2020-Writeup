@@ -1,0 +1,176 @@
+
+HOPP main
+
+; built-in functions
+
+
+; main function
+main:
+
+SETT r15, 0
+LES r0
+PLUSS r15, r0
+LES r0
+PLUSS r15, r0
+
+SETT r14, 0
+SETT r0, 48 
+PLUSS r14, r0
+
+SETT r13, 0
+SETT r0, 0 
+PLUSS r13, r0
+
+SETT r12, 0
+SETT r0, 0 
+PLUSS r12, r0
+
+SETT r11, 0
+SETT r0, 0 
+PLUSS r11, r0
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+SETT r0, 100 
+PLUSS r3, r0
+
+ME r2,r3
+BHOPP if0
+
+while0:
+SETT r1, 0
+SETT r0, 100 
+PLUSS r1, r0
+PLUSS r13, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r14, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+SETT r0, 100 
+MINUS r2, r0
+
+PLUSS r3, r13
+
+SEL r2,r3
+BHOPP while0
+SETT r1, 0
+PLUSS r1, r14
+
+SKRIV r1
+SETT r1, 0
+PLUSS r1, r14
+MINUS r14, r1
+SETT r1, 0
+SETT r0, 48 
+PLUSS r1, r0
+PLUSS r14, r1
+SETT r1, 0
+PLUSS r1, r13
+MINUS r15, r1
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+SETT r0, 10 
+PLUSS r3, r0
+
+SEL r2,r3
+BHOPP if1
+SETT r1, 0
+PLUSS r1, r14
+
+SKRIV r1
+
+
+if1:
+
+
+if0:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+SETT r0, 10 
+PLUSS r3, r0
+
+ME r2,r3
+BHOPP if2
+
+while1:
+SETT r1, 0
+SETT r0, 10 
+PLUSS r1, r0
+PLUSS r12, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r14, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r12
+
+SEL r2,r3
+BHOPP while1
+SETT r1, 0
+SETT r0, 10 
+PLUSS r1, r0
+MINUS r12, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+MINUS r14, r1
+SETT r1, 0
+PLUSS r1, r14
+
+SKRIV r1
+SETT r1, 0
+PLUSS r1, r12
+MINUS r15, r1
+
+
+if2:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+SETT r0, 0 
+PLUSS r3, r0
+
+LIK r2,r3
+BHOPP if3
+
+while2:
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r11, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r11
+
+SE r2,r3
+BHOPP while2
+
+
+if3:
+SETT r1, 0
+PLUSS r1, r11
+SETT r0, 48 
+PLUSS r1, r0
+
+SKRIV r1
+
+STOPP
+
+

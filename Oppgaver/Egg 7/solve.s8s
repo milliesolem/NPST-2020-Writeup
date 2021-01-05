@@ -1,0 +1,60 @@
+int a = $input;
+int b = $input;
+
+int hundre = 0;
+int h = 100;
+int ti = 0;
+int t = 10;
+int en = 0;
+int e = 1;
+
+
+while a >= h {
+	a -= h;
+	hundre += 1;
+}
+
+
+while b >= h {
+	b -= h;
+	hundre += 1;
+}
+while a >= t {
+	a -= t;
+	ti += 1;
+}
+while b >= t {
+	b -= t;
+	ti += 1;
+}
+while a >= e {
+	a -= e;
+	en += 1;
+}
+while b >= e {
+	b -= e;
+	en += 1;
+}
+
+if en > 9 {
+	ti += 1;
+	en -= 10;
+}
+
+if ti > 9 {
+	hundre += 1;
+	ti -= 10;
+}
+
+if hundre > 0 {
+	print 48 + hundre;
+	print 48 + ti;
+}
+
+if hundre == 0 {
+	if ti > 0 {
+		print 48 + ti;
+	}
+}
+
+print 48 + en;

@@ -1,0 +1,42 @@
+int i = $input + $input;
+int hcount = 48;
+int hundre = 0;
+int ti = 0;
+int en = 0;
+
+if i >= 100 {
+	while i - 100 >= hundre {
+		hundre += 100;
+		hcount += 1;
+	}
+
+	print hcount;
+
+	hcount -= hcount;
+	hcount += 48;
+	i -= hundre;
+
+	if i < 10 {
+		print hcount;
+	}
+}
+
+if i >= 10 {
+	while i >= ti {
+		ti += 10;
+		hcount += 1;
+	}
+
+	ti -= 10;
+	hcount -=1;
+
+	print hcount;
+
+	i -= ti;
+}
+if i != 0 {
+	while i > en {
+		en += 1;
+	}
+}
+print en + 48;

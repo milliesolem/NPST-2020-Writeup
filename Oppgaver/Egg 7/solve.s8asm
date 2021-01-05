@@ -1,0 +1,318 @@
+
+HOPP main
+
+; built-in functions
+
+
+; main function
+main:
+
+SETT r15, 0
+LES r0
+PLUSS r15, r0
+
+SETT r14, 0
+LES r0
+PLUSS r14, r0
+
+SETT r13, 0
+SETT r0, 0 
+PLUSS r13, r0
+
+SETT r12, 0
+SETT r0, 100 
+PLUSS r12, r0
+
+SETT r11, 0
+SETT r0, 0 
+PLUSS r11, r0
+
+SETT r10, 0
+SETT r0, 10 
+PLUSS r10, r0
+
+SETT r9, 0
+SETT r0, 0 
+PLUSS r9, r0
+
+SETT r8, 0
+SETT r0, 1 
+PLUSS r8, r0
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r12
+
+ME r2,r3
+BHOPP if0
+
+while0:
+SETT r1, 0
+PLUSS r1, r12
+MINUS r15, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r13, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r12
+
+SEL r2,r3
+BHOPP while0
+
+
+if0:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r14
+
+PLUSS r3, r12
+
+ME r2,r3
+BHOPP if1
+
+while1:
+SETT r1, 0
+PLUSS r1, r12
+MINUS r14, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r13, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r14
+
+PLUSS r3, r12
+
+SEL r2,r3
+BHOPP while1
+
+
+if1:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r10
+
+ME r2,r3
+BHOPP if2
+
+while2:
+SETT r1, 0
+PLUSS r1, r10
+MINUS r15, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r11, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r10
+
+SEL r2,r3
+BHOPP while2
+
+
+if2:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r14
+
+PLUSS r3, r10
+
+ME r2,r3
+BHOPP if3
+
+while3:
+SETT r1, 0
+PLUSS r1, r10
+MINUS r14, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r11, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r14
+
+PLUSS r3, r10
+
+SEL r2,r3
+BHOPP while3
+
+
+if3:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r8
+
+ME r2,r3
+BHOPP if4
+
+while4:
+SETT r1, 0
+PLUSS r1, r8
+MINUS r15, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r9, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r15
+
+PLUSS r3, r8
+
+SEL r2,r3
+BHOPP while4
+
+
+if4:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r14
+
+PLUSS r3, r8
+
+ME r2,r3
+BHOPP if5
+
+while5:
+SETT r1, 0
+PLUSS r1, r8
+MINUS r14, r1
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r9, r1
+
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r14
+
+PLUSS r3, r8
+
+SEL r2,r3
+BHOPP while5
+
+
+if5:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r9
+
+SETT r0, 9 
+PLUSS r3, r0
+
+MEL r2,r3
+BHOPP if6
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r11, r1
+SETT r1, 0
+SETT r0, 10 
+PLUSS r1, r0
+MINUS r9, r1
+
+
+if6:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r11
+
+SETT r0, 9 
+PLUSS r3, r0
+
+MEL r2,r3
+BHOPP if7
+SETT r1, 0
+SETT r0, 1 
+PLUSS r1, r0
+PLUSS r13, r1
+SETT r1, 0
+SETT r0, 10 
+PLUSS r1, r0
+MINUS r11, r1
+
+
+if7:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r13
+
+SETT r0, 0 
+PLUSS r3, r0
+
+MEL r2,r3
+BHOPP if8
+SETT r1, 0
+SETT r0, 48 
+PLUSS r1, r0
+PLUSS r1, r13
+
+SKRIV r1
+SETT r1, 0
+SETT r0, 48 
+PLUSS r1, r0
+PLUSS r1, r11
+
+SKRIV r1
+
+
+if8:
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r13
+
+SETT r0, 0 
+PLUSS r3, r0
+
+ULIK r2,r3
+BHOPP if9
+SETT r2, 0
+SETT r3, 0
+PLUSS r2, r11
+
+SETT r0, 0 
+PLUSS r3, r0
+
+MEL r2,r3
+BHOPP if10
+SETT r1, 0
+SETT r0, 48 
+PLUSS r1, r0
+PLUSS r1, r11
+
+SKRIV r1
+
+
+if10:
+
+
+if9:
+SETT r1, 0
+SETT r0, 48 
+PLUSS r1, r0
+PLUSS r1, r9
+
+SKRIV r1
+
+STOPP
+
+

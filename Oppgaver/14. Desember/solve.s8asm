@@ -1,0 +1,31 @@
+SETT r0, 0x01
+SETT r1, 0x01
+SETT r2, 1
+SETT r6, 0xff
+SETT r7, 0x01
+loop:
+LES r3
+LIK r3, r4
+BHOPP loop2
+LAGR r3
+PLUSS r0,r2
+LIK r0, r8
+BHOPP inc
+HOPP loop
+inc:
+PLUSS r1, r2
+HOPP loop
+dec:
+MINUS r1, r2 
+HOPP loop2
+loop2:
+MINUS r0,r2
+LAST r3
+LIK r3,r4
+BHOPP stopp
+SKRIV r3
+LIK r0, r8
+BHOPP dec
+HOPP loop2
+stopp:
+STOPP
