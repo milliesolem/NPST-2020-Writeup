@@ -75,7 +75,7 @@ Her blir vi gitt en zip-fil `beslag.zip`, som inneholder `pen_gwyn_greatest_hits
 
 Første jeg liker å gjøre når jeg får en fil jeg ikke skjønner noe av, er å ta en titt på innholdet i en hex-editor:
 
-![hexdump.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/2.%20Desember/hexdump.png)
+![hexdump.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/2.%20Desember/hexdump.png)
 
 Her virker det som det er et mønster. En kjede med bokstaver med fire tegn i mellom seg. Bokstavene virker til å repiteres to ganger før neste bokstav kommer. Nederst virker det som det er starten på et flagg. Vi kan skjekke ved å skrive en et python-skript som henter ut bokstavene i mellom "P" og "}" og se om vi får et flagg:
 
@@ -121,7 +121,7 @@ Hvis forrige melding var noe uklar så er altså passordet "til zip-fila,"
 
 Om vi prøver å åpne `privat.7z` ved bruk av passordet `til zip-fila,` åpnes arkivet. Vi har nå nå to nye filer: `cupcake.png` og `kladd.txt`, igjen kommer sistnevnte til bruk senere i CTF-en. La oss nå ta en titt på `cupcake.png`:
 
-![cupcake.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/3.%20Desember/cupcake.png)
+![cupcake.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/3.%20Desember/cupcake.png)
 
 Første jeg gjør i en steganografi-oppgave er å sjekke fildataen med verktøy som Stegsolve og ExifTool. I dette tilfellet ble det ved bruk av stegsolve tydelig at det var noe gjemt i LSB (Least Significant Bits) til fila. Man kan bruke et vertøy som [denne](https://stylesuxx.github.io/steganography/) til å lese LSB-data i fila. Alternativt kan man også bruke zsteg.
 
@@ -129,12 +129,12 @@ Når man dekoder LSB-dataen får man denne youtube-lenken `youtu.be/I_8ZH1Ggjk0`
 
 Men i dette tilfellet er bildet et tydelig hint, for i denne CTF-en er vi gitt et verktøy som kan "forbedre" visse bilder.
 
-![enhance.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/3.%20Desember/enhance.png)
-![enhance2.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/3.%20Desember/enhance2.png)
+![enhance.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/3.%20Desember/enhance.png)
+![enhance2.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/3.%20Desember/enhance2.png)
 
 Måten den egentlig gjør dette på er ved å ta MD5-summen av fila og sjekker om det er en bildefil på serveren ved det navnet. Forbedrer vi `cupcake.png` får vi:
 
-![9bab0c0ce96dd35b67aea468624852fb.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/3.%20Desember/9bab0c0ce96dd35b67aea468624852fb.png)
+![9bab0c0ce96dd35b67aea468624852fb.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/3.%20Desember/9bab0c0ce96dd35b67aea468624852fb.png)
 
 Her er altså flagget `PST{HuskMeteren}`
 
@@ -421,7 +421,7 @@ plt.plot(data)
 plt.show()
 ```
 
-![graph.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/7.%20Desember/graph.png)
+![graph.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/7.%20Desember/graph.png)
 
 Dette ser ut som noe binært, så jeg lagde et skript i forsøk på lese signalet. Første ting som måtte gjøres var å demodulere signalet, essensiellt bli kvitt bølgene slikt at vi bare har en sekvens med 1'ere og 0'er.
 
@@ -463,7 +463,7 @@ for i in range(binary.index("1"),len(binary),8):
 
 Skriptet printer ut `PST{0n_0ff_k3y1ng_1s_34szBû`, ser ut som vi har en god del av flagget. Etter å ha googlet filformatet fant jeg [Universal Radio Hacker](https://github.com/jopohl/urh), et program som lot meg gjøre akkurat det jeg ville uten problem. Laster vi inn fila i programmet og setter "Show as" til "ASCII" ser vi at det fulle flagget er `PST{0n_0ff_k3y1ng_1s_34sy!}`
 
-![urh.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/7.%20Desember/urh.png)
+![urh.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/7.%20Desember/urh.png)
 
 ## 8. Desember
 
@@ -569,11 +569,11 @@ Får output `1f8b0800f149ce5f02ff0b080ea9fe307ff94e08ee6b01e25608bd7c672d00124dc
 
 ### Egg #6
 
-![mal.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/Egg%206/mal.png)
+![mal.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/Egg%206/mal.png)
 
 De som logget inn på DASS ettermiddagen 9. desember ble presantert med en tjenestepakkeinstallasjon. Etter at tjenestepakken hadde blitt installert ville man bli introdusert til et nytt programm på DASS, Mal. Dette programmet kunne brukes til å tegne bilder og sette dem som skrivebordsbakgrunn på DASS. Om man så åpner Mal og trykker `Hjelp -> Åpne Mal 3D (x86)` vil man bli presantert med en feilmelding: 
 
-![error.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/Egg%206/error.png)
+![error.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/Egg%206/error.png)
 
 La oss ta en titt på den assembly-koden:
 
@@ -1263,11 +1263,11 @@ Julenissens verksted på Nordpolen har mottatt dette julekortet. Kortet lå ikke
 Kan du undersøke om det er noe rart med kortet?
 ```
 
-![julekort.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/23.%20Desember/julekort.png)
+![julekort.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/23.%20Desember/julekort.png)
 
 Vi blir gitt et bilde `julekort.png`. Jeg gjør som jeg alltid gjør med bilder og sjekker exiftool og stegsolve. I stegsolve ser jeg at det er gjemt noe QR-koder i LSB, og om man studerer detaljene i orginalbildet så merker man at julekulene er i rekkefølgen rød + grønn + blå. Antagelig skal man XOR-e sammen LSB i de forskjellige fargekanalene. Gjør man dette får man følgende QR-kode:
 
-![flag.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/master/NPST%202020%20Writetup/Oppgaver/23.%20Desember/flag.png)
+![flag.png](https://raw.githubusercontent.com/williamsolem/NPST-2020-Writeup/main/Oppgaver/23.%20Desember/flag.png)
 
 
 Leser man QR-koden får man `PST{4ll_th3s3_d3l1c10us_l4y3rs}`, som er flagget.
